@@ -1,3 +1,6 @@
+### This code goes with
+### http://bit.ly/1G9zMk3
+###
 ######### 1. Unknown Probability of Success ########
 ## Using built-in R pseudo-random number generator
 theta_true <- runif(1,0,1)
@@ -12,6 +15,8 @@ Zpop <- sample(c(rep(1,A),rep(0,B)))
 ### Pull random sample from population
 N_samp <- 500
 Zsamp <- sample(Zpop,N_samp)
+
+Y_samp <- sum(Zsamp)
 
 betaplot <- function(a,b){
   theta = seq(0,1,0.005)
